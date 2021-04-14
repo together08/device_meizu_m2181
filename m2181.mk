@@ -347,6 +347,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # Overlays-RRO
 PRODUCT_PACKAGES += \
+    CarrierConfigOverlay \
     WifiOverlay
 
 # Partitions
