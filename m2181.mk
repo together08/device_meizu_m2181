@@ -39,6 +39,21 @@ PRODUCT_PACKAGES_DEBUG += \
 $(call inherit-product, hardware/qcom-caf/sm8350/audio/configs/lahaina/lahaina.mk)
 $(call inherit-product, vendor/qcom/opensource/audio/configs/qssi/qssi.mk)
 
+PRODUCT_COPY_FILES += \
+    audio.primary.lahaina \
+    sound_trigger.primary.lahaina \
+    liba2dpoffload \
+    libbatterylistener \
+    libcomprcapture \
+    libexthwplugin \
+    libhdmiedid \
+    libhfp \
+    libsndmonitor \
+    libspkrprot \
+    libqcompostprocbundle \
+    libqcomvisualizer \
+    libqcomvoiceprocessing
+
 # DTB
 PRODUCT_COPY_FILES += \
     $(M2181_PREBUILT)/dtb:dtb.img
