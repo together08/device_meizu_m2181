@@ -53,3 +53,9 @@ vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libshoebox.so
 vendor/lib64/soundfx/libasphere.so
 vendor/lib64/soundfx/libshoebox.so
+
+# Vibrator
+vendor/lib/hw/awinic.haptic.effect.so
+vendor/firmware/awinic_haptic_params.bin
+vendor/firmware/aw8697_osc_rtp_24K_5s.bin
+vendor/firmware/aw_170hz.bin
