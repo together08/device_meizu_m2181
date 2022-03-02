@@ -56,6 +56,11 @@ PRODUCT_COPY_FILES += \
 
 # Display
 $(call inherit-product, hardware/qcom-caf/sm8350/display/config/display-product.mk)
+$(call inherit-product, hardware/qcom-caf/sm8350/display/config/display-board.mk)
+$(call inherit-product, vendor/qcom/opensource/display/config/display-product-vendor.mk)
+$(call inherit-product, vendor/qcom/opensource/commonsys/display/config/display-product-commonsys.mk)
+$(call inherit-product, vendor/qcom/opensource/commonsys-intf/display/config/display-interfaces-product.mk)
+$(call inherit-product, vendor/qcom/opensource/commonsys-intf/display/config/display-product-system.mk)
 
 # DTB
 PRODUCT_COPY_FILES += \
