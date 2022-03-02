@@ -39,7 +39,7 @@ PRODUCT_PACKAGES_DEBUG += \
 $(call inherit-product, hardware/qcom-caf/sm8350/audio/configs/lahaina/lahaina.mk)
 $(call inherit-product, vendor/qcom/opensource/audio/configs/qssi/qssi.mk)
 
-PRODUCT_COPY_FILES += \
+PRODUCT_PACKAGES += \
     audio.primary.lahaina \
     sound_trigger.primary.lahaina \
     liba2dpoffload \
