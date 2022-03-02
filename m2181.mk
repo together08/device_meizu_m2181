@@ -83,6 +83,7 @@ PRODUCT_SOONG_NAMESPACES += \
 $(call inherit-product, vendor/qcom/opensource/usb/vendor_product.mk)
 
 TARGET_HAS_DIAG_ROUTER := true
+TARGET_KERNEL_VERSION := 5.4
 
 # Vibrator
 $(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.mk)
