@@ -54,6 +54,9 @@ PRODUCT_COPY_FILES += \
     libqcomvisualizer \
     libqcomvoiceprocessing
 
+# Display
+$(call inherit-product, hardware/qcom-caf/sm8350/display/config/display-product.mk)
+
 # DTB
 PRODUCT_COPY_FILES += \
     $(M2181_PREBUILT)/dtb:dtb.img
