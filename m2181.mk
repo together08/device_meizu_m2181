@@ -55,7 +55,6 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing
 
 # Bluetooth
-$(call inherit-product, vendor/qcom/opensource/commonsys-intf/bluetooth/bt-system-legacy-board.mk)
 $(call inherit-product, vendor/qcom/opensource/commonsys-intf/bluetooth/bt-system-opensource-product.mk)
 
 PRODUCT_COPY_FILES += \
