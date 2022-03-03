@@ -495,6 +495,22 @@ vendor/lib64/vendor.qti.hardware.fm@1.0.so|ee11be18738a1ce8752eca2e66b70cbe728e4
 # GPU drivers - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
 -vendor/app/com.qualcomm.qti.gpudrivers.lahaina.api30/com.qualcomm.qti.gpudrivers.lahaina.api30.apk;PRESIGNED|57f68fb3484aa59376dc29adc7aa8824c2f4edf3
 
+# GPU firmware
+vendor/firmware/a615_zap.b00
+vendor/firmware/a615_zap.b01
+vendor/firmware/a615_zap.b02
+vendor/firmware/a615_zap.elf
+vendor/firmware/a615_zap.mdt
+vendor/firmware/a619_gmu.bin
+vendor/firmware/a630_sqe.fw
+vendor/firmware/a660_gmu.bin
+vendor/firmware/a660_sqe.fw
+vendor/firmware/a660_zap.b00
+vendor/firmware/a660_zap.b01
+vendor/firmware/a660_zap.b02
+vendor/firmware/a660_zap.elf
+vendor/firmware/a660_zap.mdt
+
 # Vibrator
 vendor/lib/hw/awinic.haptic.effect.so
 vendor/firmware/awinic_haptic_params.bin
