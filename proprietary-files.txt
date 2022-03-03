@@ -314,6 +314,16 @@ vendor/lib64/libmmcamera_cac3.so
 vendor/lib64/libjpege.so
 vendor/lib64/libmctfengine_stub.so
 
+# CDSP - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
+vendor/bin/cdsprpcd|826ca230a88d59d0e68e4ad6090b5109e3dee632
+vendor/etc/init/vendor.qti.cdsprpc-service.rc|36772b70216796e8ef19376d9c6a81ee9ffff549
+vendor/lib/libcdsprpc.so|6aae12904697f53905ebbe8f96bf3f7e18dcffcc
+vendor/lib/libcdsp_default_listener.so|24080c1b7ff13680ae08f0ca9c5e004d6abe7cb5
+vendor/lib/libsysmon_cdsp_skel.so|98693ffb744f779a52fabef9fa9401c28fb8cb5c
+vendor/lib64/libcdsprpc.so|68bcabef3db7b9785d9205556eb517e5cc77dd26
+vendor/lib64/libcdsp_default_listener.so|63a7093e7f49e5afeadaa331474580d0bc8b89de
+vendor/lib64/libsysmon_cdsp_skel.so|5bebbfec7f7be116e162d0982abb05c7562d2d13
+
 # Display (Adreno) - LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
 -vendor/app/com.qualcomm.qti.gpudrivers.lahaina.api30/com.qualcomm.qti.gpudrivers.lahaina.api30.apk;PRESIGNED|57f68fb3484aa59376dc29adc7aa8824c2f4edf3
 vendor/lib/egl/eglSubDriverAndroid.so|f54f1f5b09ebe164610dff2ff79b0a510d9fbc7d
