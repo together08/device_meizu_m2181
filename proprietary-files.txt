@@ -4,7 +4,7 @@ system_ext/lib64/com.qualcomm.qti.ant@1.0.so|4438005b864f38b469962791db0f856a60f
 vendor/lib/hw/com.dsi.ant@1.0-impl.so|7985aacab9144eb40b39a3fa7ace429b5fc344b5
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so|a6f313ee471609f35c242550024174bd3ead402d
 
-# Audio
+# Audio - from meizu/meizu_18_CN/meizu18:11/RKQ1.210715.001/1635405383:user/release-keys
 system_ext/etc/permissions/audiosphere.xml
 -system_ext/framework/audiosphere.jar
 vendor/lib/libacdb-fts.so
@@ -33,11 +33,11 @@ vendor/lib64/libhdmipassthru.so
 vendor/lib64/libqtigef.so
 vendor/lib64/libssrec.so
 
-# Audio HAL
+# Audio HAL - from meizu/meizu_18_CN/meizu18:11/RKQ1.210715.001/1635405383:user/release-keys
 -vendor/lib/libaudio_log_utils.so
 -vendor/lib64/libaudio_log_utils.so
 
-# Audio (Firmware)
+# Audio (Firmware) - from meizu/meizu_18_CN/meizu18:11/RKQ1.210715.001/1635405383:user/release-keys
 vendor/firmware/RCV-cs35l45-dsp1-spk-prot.bin
 vendor/firmware/RCV-cs35l45-dsp1-spk-diag.bin
 vendor/firmware/SPK-cs35l45-dsp1-spk-diag.bin
@@ -54,7 +54,7 @@ vendor/firmware/cs35l45-delta-rcv-game.txt
 vendor/firmware/cs35l45-delta-spk-music.txt
 vendor/firmware/cs35l45-delta-rcv-handsfree.txt
 
-# Audio FX modules
+# Audio FX modules - from meizu/meizu_18_CN/meizu18:11/RKQ1.210715.001/1635405383:user/release-keys
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libshoebox.so
 vendor/lib64/soundfx/libasphere.so
@@ -502,7 +502,7 @@ vendor/lib64/vendor.qti.hardware.fm@1.0.so|ee11be18738a1ce8752eca2e66b70cbe728e4
 # GPU drivers - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
 -vendor/app/com.qualcomm.qti.gpudrivers.lahaina.api30/com.qualcomm.qti.gpudrivers.lahaina.api30.apk;PRESIGNED|57f68fb3484aa59376dc29adc7aa8824c2f4edf3
 
-# GPU firmware
+# GPU firmware - from meizu/meizu_18_CN/meizu18:11/RKQ1.210715.001/1635405383:user/release-keys
 vendor/firmware/a615_zap.b00
 vendor/firmware/a615_zap.b01
 vendor/firmware/a615_zap.b02
@@ -680,11 +680,16 @@ vendor/lib64/libmeters-ns.so|d7f77e3316ac6bf85c46218c5dd045b8ea45182c
 vendor/lib64/libprekill.so|c820ce3e9a5281765ded25918ccf19bbd71f7808
 vendor/lib64/libsplh.so|ab50d0c632dadf25ebd7c68947da2099ae310c1b
 
-# Vibrator
+# Vibrator - from meizu/meizu_18_CN/meizu18:11/RKQ1.210715.001/1635405383:user/release-keys
 vendor/lib/hw/awinic.haptic.effect.so
 vendor/firmware/awinic_haptic_params.bin
 vendor/firmware/aw8697_osc_rtp_24K_5s.bin
 vendor/firmware/aw_170hz.bin
+
+# VM - from meizu/meizu_18_CN/meizu18:11/RKQ1.210715.001/1635405383:user/release-keys
+vendor/bin/vmmgr
+vendor/etc/init/vmmgr.rc
+vendor/etc/vmmgr.conf
 
 # WiFi - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
 vendor/bin/cnss-daemon|3ff1023b8e36cebafba86d96214c97d5e383ab16
