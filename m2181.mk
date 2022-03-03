@@ -106,6 +106,10 @@ $(call inherit-product, vendor/qcom/opensource/commonsys-intf/display/config/dis
 PRODUCT_COPY_FILES += \
     $(M2181_PREBUILT)/dtb:dtb.img
 
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.3-service.clearkey
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
