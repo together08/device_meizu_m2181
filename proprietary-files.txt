@@ -394,6 +394,11 @@ vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so|56250a225377aed4fdbf88cc4ed2a
 vendor/lib64/vendor.qti.latency@2.0.so|3a6245781d894f86d9c35e40199751d86cd18503
 vendor/lib64/vendor.qti.latency@2.1.so|8a01cc8e743551b7e4c7691358dd4ed6048da6d2
 
+# ConfigStore - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
+vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service|bb1a4b4b1ee951487b7db48a98e399986e640675
+vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc|4ede0250585a44b01d351bbc301d7a13cc3d783d
+vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|b093bd56d1622656c3ada5947769949ab1bc2a34
+
 # CVP - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
 vendor/etc/cvp/v2.0/facedetection/model1.dat|b297119bcd28225b6b2f016dd00db6338ae21f13
 vendor/etc/cvp/v2.1/facedetection/model2.dat|2bea6521ea117c70f938f542f48f9983259fca8d
