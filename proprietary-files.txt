@@ -1,3 +1,9 @@
+# ANT+ - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
+system_ext/lib/com.qualcomm.qti.ant@1.0.so|b3ee0c108229539e1a0e3a53b3292017d10fcb59
+system_ext/lib64/com.qualcomm.qti.ant@1.0.so|4438005b864f38b469962791db0f856a60fb5710
+vendor/lib/hw/com.dsi.ant@1.0-impl.so|7985aacab9144eb40b39a3fa7ace429b5fc344b5
+vendor/lib64/hw/com.dsi.ant@1.0-impl.so|a6f313ee471609f35c242550024174bd3ead402d
+
 # Audio
 system_ext/etc/permissions/audiosphere.xml
 -system_ext/framework/audiosphere.jar
