@@ -685,3 +685,6 @@ vendor/lib/hw/awinic.haptic.effect.so
 vendor/firmware/awinic_haptic_params.bin
 vendor/firmware/aw8697_osc_rtp_24K_5s.bin
 vendor/firmware/aw_170hz.bin
+
+# WiFi - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
+vendor/bin/cnss-daemon|3ff1023b8e36cebafba86d96214c97d5e383ab16
