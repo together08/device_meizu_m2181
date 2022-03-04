@@ -110,6 +110,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3-service.clearkey
 
+# Fastboot
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
