@@ -897,6 +897,31 @@ vendor/etc/sensors/proto/sns_ultra_violet.proto
 vendor/etc/sensors/proto/sns_wrist_tilt_gesture.proto
 vendor/etc/sensors/sns_reg_config
 
+# Thermal - from meizu/meizu_18_CN/meizu18:11/RKQ1.210715.001/1635405383:user/release-keys
+vendor/bin/thermal-engine
+vendor/etc/init/init_thermal-engine.rc
+vendor/etc/thermal-engine.conf
+vendor/lib/libthermalclient.so
+vendor/lib64/libthermalclient.so
+vendor/etc/thermal-engine.conf
+vendor/etc/thermal.benchmark.conf
+vendor/etc/thermal.high.conf
+vendor/etc/thermal.high.level1.conf
+vendor/etc/thermal.high.level2.conf
+vendor/etc/thermal.high.level3.conf
+vendor/etc/thermal.high.level4.conf
+vendor/etc/thermal.high.level5.conf
+vendor/etc/thermal.low.conf
+vendor/etc/thermal.low.level1.conf
+vendor/etc/thermal.low.level2.conf
+vendor/etc/thermal.mid.conf
+vendor/etc/thermal.mid.level1.conf
+vendor/etc/thermal.mid.level2.conf
+vendor/etc/thermal.mid.level3.conf
+vendor/etc/thermal.mid.level4.conf
+vendor/etc/thermal.sgame.conf
+vendor/etc/thermal.super.conf
+
 # Time - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
 -vendor/app/TimeService/TimeService.apk|1a5f39aa2969feee50ff81ec870b5e2669ae515e
 vendor/bin/time_daemon|4c2a0ff6d2322c9fda64321b12bba62aa30bc385
