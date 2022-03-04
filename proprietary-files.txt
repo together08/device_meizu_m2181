@@ -853,6 +853,11 @@ vendor/lib64/libmeters-ns.so|d7f77e3316ac6bf85c46218c5dd045b8ea45182c
 vendor/lib64/libprekill.so|c820ce3e9a5281765ded25918ccf19bbd71f7808
 vendor/lib64/libsplh.so|ab50d0c632dadf25ebd7c68947da2099ae310c1b
 
+# Peripheral manager - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
+vendor/bin/pm-proxy|f8facebb49d5c46ffd0036c31f60ad188ded4cc4
+vendor/bin/pm-service|8a7615c3bdca02ab45da44320c68b85d8da6c3b2
+vendor/lib64/libperipheral_client.so|cb7d5613a4e0afb8395fe7f139480e615c5f6da2
+
 # QCV - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
 vendor/bin/init.qti.qcv.sh|a8f664cb25d5d381885833e6a8c8b2f462958acf
 vendor/etc/init/init.qti.qcv.rc|1d0cff5660bdf7abc22ac2b960a0dcd88404d740
