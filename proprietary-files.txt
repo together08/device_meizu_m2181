@@ -897,6 +897,12 @@ vendor/etc/sensors/proto/sns_ultra_violet.proto
 vendor/etc/sensors/proto/sns_wrist_tilt_gesture.proto
 vendor/etc/sensors/sns_reg_config
 
+# SOTER - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
+vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|89ff6b0bb10110c5ab91ab089d540095368ff645
+vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|76447a61ad5529949365eeb7e8ca000e48bd28ae
+vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|ca9d2f2cf5b1dd49bdcee560e790c53e317b102a
+vendor/lib64/vendor.qti.hardware.soter@1.0.so|ae0d677b1cd2f4f46b8f15416497684e94b2108d
+
 # Thermal - from meizu/meizu_18_CN/meizu18:11/RKQ1.210715.001/1635405383:user/release-keys
 vendor/bin/thermal-engine
 vendor/etc/init/init_thermal-engine.rc
