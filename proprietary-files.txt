@@ -1,16 +1,82 @@
-# ANT+ - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
-system_ext/lib/com.qualcomm.qti.ant@1.0.so|b3ee0c108229539e1a0e3a53b3292017d10fcb59
-system_ext/lib64/com.qualcomm.qti.ant@1.0.so|4438005b864f38b469962791db0f856a60fb5710
-vendor/lib/hw/com.dsi.ant@1.0-impl.so|7985aacab9144eb40b39a3fa7ace429b5fc344b5
-vendor/lib64/hw/com.dsi.ant@1.0-impl.so|a6f313ee471609f35c242550024174bd3ead402d
+# ACDB
+vendor/etc/acdbdata/HDK/lahaina-hhg-snd-card/HHG_Bluetooth_cal.acdb
+vendor/etc/acdbdata/HDK/lahaina-hhg-snd-card/HHG_General_cal.acdb
+vendor/etc/acdbdata/HDK/lahaina-hhg-snd-card/HHG_Global_cal.acdb
+vendor/etc/acdbdata/HDK/lahaina-hhg-snd-card/HHG_Handset_cal.acdb
+vendor/etc/acdbdata/HDK/lahaina-hhg-snd-card/HHG_Hdmi_cal.acdb
+vendor/etc/acdbdata/HDK/lahaina-hhg-snd-card/HHG_Headset_cal.acdb
+vendor/etc/acdbdata/HDK/lahaina-hhg-snd-card/HHG_Speaker_cal.acdb
+vendor/etc/acdbdata/HDK/lahaina-hhg-snd-card/HHG_workspaceFile.qwsp
+vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.00.pmd
+vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.10.pmd
+vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.00.pmd
+vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.10.pmd
+vendor/etc/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd
+vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.10.pmd
+vendor/etc/acdbdata/adsp_avs_config.acdb
 
-# Power Off Alarm - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
+# ADSP
+vendor/bin/adsprpcd
+vendor/bin/loadalgo
+vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc
+vendor/lib/libadsprpc.so
+vendor/lib64/libadsp_default_listener.so
+vendor/lib64/libadsprpc.so
+
+# ADSP modules
+vendor/lib/rfsa/adsp/bm2n06.bin
+vendor/lib/rfsa/adsp/bm2n08.bin
+vendor/lib/rfsa/adsp/bm2n12.bin
+vendor/lib/rfsa/adsp/bm2n13.bin
+vendor/lib/rfsa/adsp/bm2n14.bin
+vendor/lib/rfsa/adsp/bm2n15.bin
+vendor/lib/rfsa/adsp/capi_v2_cirrus_sp.so
+vendor/lib/rfsa/adsp/libadsp_jpege_skel.so
+vendor/lib/rfsa/adsp/libapps_mem_heap.so
+vendor/lib/rfsa/adsp/libarcsoft_hdrplus_hvx_skel.so
+vendor/lib/rfsa/adsp/libbitml_nsp_skel.so
+vendor/lib/rfsa/adsp/libbitml_nsp_v2_skel.so
+vendor/lib/rfsa/adsp/libcamera_nn_skel.so
+vendor/lib/rfsa/adsp/libcvpdsp_2_1.so
+vendor/lib/rfsa/adsp/libdspCV_skel.so
+vendor/lib/rfsa/adsp/libdsp_streamer_binning.so
+vendor/lib/rfsa/adsp/libfastcvadsp.so
+vendor/lib/rfsa/adsp/libfastcvdsp_skel.so
+vendor/lib/rfsa/adsp/libhdr_skel.so
+vendor/lib/rfsa/adsp/libmctfengine_skel.so
+vendor/lib/rfsa/adsp/libmobilenet_dsp_frc_networks.so
+vendor/lib/rfsa/adsp/libmobilenet_dsp_frc.so
+vendor/lib/rfsa/adsp/libneat_1_1_skel.so
+vendor/lib/rfsa/adsp/libQnnHtpAltPrepSkel.so
+vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so
+vendor/lib/rfsa/adsp/libscveT2T_skel.so
+vendor/lib/rfsa/adsp/libsn_hvx_skel.so
+vendor/lib/rfsa/adsp/libsns_device_mode_skel.so
+vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
+vendor/lib/rfsa/adsp/libsuper_res_networks.so
+vendor/lib/rfsa/adsp/libvpp_ais_networks.so
+vendor/lib/rfsa/adsp/libVppAisQnnHtp.so
+vendor/lib/rfsa/adsp/libVppFrcQnnHtp.so
+vendor/lib/rfsa/adsp/libVppQnnHtp.so
+vendor/lib/rfsa/adsp/libvpt_action_recognition.so
+
+# ADSP modules (aptX)
+vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDADV_Encoder.so
+vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Speech_Decoder.so
+
+# Alarm - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
 -product/app/PowerOffAlarm/PowerOffAlarm.apk|6e3ba805cfbeb0db590f988891448345cc3698ba
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|7894b5b94626fe4f6beb0761dab8221295382258
 vendor/bin/power_off_alarm|4daf3facda380ea8ef31ad3b56f1d216eec4183a
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|a03a9a1c818595b19272ea6ffb466e23a7fc3b05
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|0b5b86c7ea668197244b83dad4d686897b5e4fb4
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so|668fa46809fba01ab1e0f7af8e8457d94b6b1548
+
+# ANT+ - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
+system_ext/lib/com.qualcomm.qti.ant@1.0.so|b3ee0c108229539e1a0e3a53b3292017d10fcb59
+system_ext/lib64/com.qualcomm.qti.ant@1.0.so|4438005b864f38b469962791db0f856a60fb5710
+vendor/lib/hw/com.dsi.ant@1.0-impl.so|7985aacab9144eb40b39a3fa7ace429b5fc344b5
+vendor/lib64/hw/com.dsi.ant@1.0-impl.so|a6f313ee471609f35c242550024174bd3ead402d
 
 # Audio - from meizu/meizu_18_CN/meizu18:11/RKQ1.210715.001/1635405383:user/release-keys
 system_ext/etc/permissions/audiosphere.xml
@@ -1066,16 +1132,6 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so|6cf6e534590ccd2090f6ea4881bedf26e24
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so|26df2c5ff42d58456ebcd0fd7d0ba51f56a3f390
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so|f693eafe5bb3aefb731d57b084da914b318539d9
 
-# SCVE - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
-vendor/lib64/libscveCommon.so|6adf58a1b21c3ffad3018708d351b88709665527
-vendor/lib64/libscveCommon_stub.so|feb605c644e088129e9ca291e358b0ad9ba11c16
-vendor/lib64/libscveObjectSegmentation.so|0f25100bd68908e30a8b92bc3f2332fbb0bca940
-vendor/lib64/libscveObjectSegmentation_stub.so|8a97ddd79f66978067b22e46d707a0dfecb368ea
-vendor/lib64/libscveObjectTracker.so|46d68d63b4a71ba486779c3f6e2c85233ecb8bb1
-vendor/lib64/libscveObjectTracker_stub.so|1a9bd587a432b0b8950a2ed012257b00fd7e89eb
-vendor/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so|e5e18a9383e9c16f1016a8034a9ae18f05217716
-vendor/lib64/vendor.qti.hardware.scve.panorama@1.0.so|c5514ccf10d2ff9bd22695e86156d9a7f6da1063
-
 # Sensors - from meizu/meizu_18_CN/meizu18:11/RKQ1.210715.001/1635405383:user/release-keys
 vendor/bin/hw/android.hardware.sensors@2.0-service.multihal
 vendor/bin/init.qcom.sensors.sh
@@ -1306,6 +1362,16 @@ vendor/etc/sensors/proto/sns_tilt_to_wake.proto
 vendor/etc/sensors/proto/sns_ultra_violet.proto
 vendor/etc/sensors/proto/sns_wrist_tilt_gesture.proto
 vendor/etc/sensors/sns_reg_config
+
+# SCVE - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
+vendor/lib64/libscveCommon.so|6adf58a1b21c3ffad3018708d351b88709665527
+vendor/lib64/libscveCommon_stub.so|feb605c644e088129e9ca291e358b0ad9ba11c16
+vendor/lib64/libscveObjectSegmentation.so|0f25100bd68908e30a8b92bc3f2332fbb0bca940
+vendor/lib64/libscveObjectSegmentation_stub.so|8a97ddd79f66978067b22e46d707a0dfecb368ea
+vendor/lib64/libscveObjectTracker.so|46d68d63b4a71ba486779c3f6e2c85233ecb8bb1
+vendor/lib64/libscveObjectTracker_stub.so|1a9bd587a432b0b8950a2ed012257b00fd7e89eb
+vendor/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so|e5e18a9383e9c16f1016a8034a9ae18f05217716
+vendor/lib64/vendor.qti.hardware.scve.panorama@1.0.so|c5514ccf10d2ff9bd22695e86156d9a7f6da1063
 
 # SOTER - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|89ff6b0bb10110c5ab91ab089d540095368ff645
