@@ -581,6 +581,15 @@ vendor/firmware/a660_zap.b02
 vendor/firmware/a660_zap.elf
 vendor/firmware/a660_zap.mdt
 
+# Keymaster - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
+vendor/bin/hw/android.hardware.keymaster@4.1-service-qti|86282e2e8e59b15723b0890e722dba272f21e09d
+vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc|f6907552961ba772c1ad5b493913a60d65abedb4
+vendor/lib64/libkeymasterdeviceutils.so|2123a8fd38b342fdc55f480d91c320b365069c80
+vendor/lib64/libkeymasterutils.so|d639f7dd05328c3d3c1ec640356a0bc67d500168
+vendor/lib64/libqcbor.so|03d2dc276276c7ecf84fd209befbb8cfae10b12f
+vendor/lib64/libqtikeymaster4.so|4c4ed214ab38148b8113f99c28a11f42ceb15063
+vendor/lib64/libspcom.so|c007c29f3ce9d27f89b8e966f6e9b852104259e3
+
 # Media - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
 system_ext/lib/libmmosal.so|ff554643ca1ac5c69f58e23b0e4769ce2653e27f
 system_ext/lib/libmmparser_lite.so|5247314033baaa478b80ffa257189c740e1e0cb3
