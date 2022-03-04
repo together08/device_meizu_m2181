@@ -206,6 +206,14 @@ PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/ueventd-odm.rc:$(TARGET_COPY_OUT_ODM
 PRODUCT_PACKAGES += vmmgr vmmgr.rc vmmgr.conf
 endif
 
+# OMX Packages
+PRODUCT_PACKAGES += \
+    libOmxAacEnc \
+    libOmxAmrEnc \
+    libOmxEvrcEnc \
+    libOmxG711Enc \
+    libOmxQcelp13Enc
+
 # OpenGL
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml
