@@ -97,6 +97,10 @@ PRODUCT_PACKAGES += \
 # Data
 $(call inherit-product, vendor/qcom/opensource/dataservices/dataservices_vendor_product.mk)
 
+PRODUCT_PACKAGES += \
+    ipacm \
+    IPACM_cfg.xml
+
 # Display
 $(call inherit-product, hardware/qcom-caf/sm8350/display/config/display-product.mk)
 $(call inherit-product, hardware/qcom-caf/sm8350/display/config/display-board.mk)
