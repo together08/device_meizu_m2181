@@ -889,6 +889,11 @@ vendor/etc/sensors/proto/sns_ultra_violet.proto
 vendor/etc/sensors/proto/sns_wrist_tilt_gesture.proto
 vendor/etc/sensors/sns_reg_config
 
+# TrustedUI - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
+vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|251475f5abd62976b2f148fa3803e0970746b75e
+vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|11c824c89322cf080a8ce5eb1200a64c2f69194a
+
 # Vibrator - from meizu/meizu_18_CN/meizu18:11/RKQ1.210715.001/1635405383:user/release-keys
 vendor/lib/hw/awinic.haptic.effect.so
 vendor/firmware/awinic_haptic_params.bin
