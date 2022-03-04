@@ -494,6 +494,31 @@ vendor/lib64/vendor.display.postproc@1.0.so|47b01ccbabd3886c04c65ddffcbfd563a5e9
 # Display-calibration - from meizu/meizu_18_CN/meizu18:11/RKQ1.210715.001/1635405383:user/release-keys
 vendor/etc/qdcm_calib_data_meizu_amoled_cmd_mode_dsi_3k_panel_with_DSC.xml
 
+# DPM - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
+system/framework/tcmclient.jar|60fc12be7581c89cbdc3a5ba0526b423af492baa
+system_ext/bin/dpmd|b11102e06c7e169b3da762a0db408cb8e16d7b01
+system_ext/etc/dpm/dpm.conf|95e27da8c989e96c6faea6f0697bce11955b62a5
+system_ext/etc/init/dpmd.rc|738b638ff04cda368e22c03e16baf90ba157a6fc
+system_ext/etc/permissions/com.qti.dpmframework.xml|c4b7ad0879d00c1eba4f3fe3a88ddb8aa153629a
+system_ext/etc/permissions/dpmapi.xml|255903759a60a31c0876ec004e74554c753270fe
+system_ext/etc/seccomp_policy/tcmd.policy|aea9797136b67f43ea837d03fa9c1291710e07a2
+system_ext/framework/com.qti.dpmframework.jar|065a1864f817cda3dc59a96c3f62b0f1df517129
+system_ext/framework/dpmapi.jar|005e8092687849615ce119b5d6c188f08e397d79
+system_ext/lib/com.qualcomm.qti.dpm.api@1.0.so|285d19f42f6bd79ea8d1f4d1de4bd1f8dc89cb61
+system_ext/lib/libdpmctmgr.so|82fbce35990a0aeb76e12e10416322fb09d5f14c
+system_ext/lib/libdpmfdmgr.so|43ccecd6844a5b0ded82f85e51a46f2bd0b1faec
+system_ext/lib/libdpmframework.so|2111c90fb2aae18d47c0449c7a93907707a6acd1
+system_ext/lib/libdpmtcm.so|ae1d8fb4463bad39f80b0eb02f2ca8340908f91b
+system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so|10563c1f60c2e7cb80729c30dc131114e63ef2f3
+system_ext/lib64/libdpmctmgr.so|5351d3a64687a8066ff972394e495ed6255caa44
+system_ext/lib64/libdpmfdmgr.so|3b7c5a6c652948fa86790478d4fcbd0df3172947
+system_ext/lib64/libdpmframework.so|3e2d68ddd6f944b44368be4190bc3c8f3d73fe6c
+system_ext/lib64/libdpmtcm.so|ac8bb063de43870f67e2aba15eee5baaa9864c84
+vendor/bin/dpmQmiMgr|2da835936abc23f39903e68a63c5e7303edac1e7
+vendor/etc/init/dpmQmiMgr.rc|1538743661a5c48c15cd105beaad20f72953885a
+vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|3a407eb9cfe4bda97d793d0b671389aee7afe48f
+vendor/lib64/libdpmqmihal.so|2656dc27e2da38a482d639701647520d259ff50b
+
 # DRM-widevine - from meizu/meizu_18_CN/meizu18:11/RKQ1.210715.001/1635405383:user/release-keys
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
