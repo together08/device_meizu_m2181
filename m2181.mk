@@ -56,7 +56,9 @@ PRODUCT_PACKAGES += \
     libspkrprot \
     libqcompostprocbundle \
     libqcomvisualizer \
-    libqcomvoiceprocessing
+    libqcomvoiceprocessing \
+    libavservices_minijail \
+    libavservices_minijail.vendor
 
 # Bluetooth
 $(call inherit-product, vendor/qcom/opensource/commonsys-intf/bluetooth/bt-system-opensource-product.mk)
