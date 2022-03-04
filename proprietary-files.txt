@@ -714,6 +714,24 @@ vendor/lib64/unnhal-acc-common.so|85794b7757d3d80090326f8eddeefdf928eab259
 vendor/lib64/unnhal-acc-gpu.so|71d6930c97ea9256650bb477905b06806c6c143f
 vendor/lib64/unnhal-acc-htp.so|59e5bc6fab0e15310cb15237c8f0a984edb427be
 
+# NFC - from meizu/meizu_18_CN/meizu18:11/RKQ1.210715.001/1635405383:user/release-keys
+vendor/bin/nqnfcinfo
+vendor/etc/libnfc-mtp-SN100.conf
+vendor/etc/libnfc-mtp-SN100_38_4MHZ.conf
+vendor/etc/libnfc-nci.conf
+vendor/etc/libnfc-qrd-SN100.conf
+vendor/etc/libnfc-qrd-SN100_38_4MHZ.conf
+
+# NFC (Secure Element) - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
+vendor/bin/hw/vendor.qti.esepowermanager@1.1-service|0427ec8683d9737faa00d3fcb9e19b660a26c298
+vendor/bin/hw/vendor.qti.secure_element@1.2-service|e91c7065ddc2473fa5f3674096bc7590bb440d88
+vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc|3c024c7135ec3dd8658624509ee61396a74f1ede
+vendor/etc/init/vendor.qti.secure_element@1.2-service.rc|cb8e44a67709a5d9c2f0544058d79eb9f6faad7b
+vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so|5560bfccdc7ea51ed6f3ae032573122ef113c619
+vendor/lib64/android.hardware.secure_element@1.0-impl.so|4fd685591c2232c0e5b962e52a3e53b51ce9cbc5
+vendor/lib64/vendor.qti.esepowermanager@1.0.so|e8375850e676bb3fc1b953cb06cc1a819237c18d
+vendor/lib64/vendor.qti.esepowermanager@1.1.so|ae11c893e347b4e263f28962920e1b8e76fbd687
+
 # Perf - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
 system_ext/etc/seccomp_policy/perfservice.policy|579d2f1b36b98aee30594d2e955552e4dd18ed87
 vendor/bin/hw/vendor.qti.hardware.perf@2.2-service|081d5dbbd246067067ecd56f31fcd1ee440e9d46
