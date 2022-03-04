@@ -501,6 +501,12 @@ vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 vendor/lib64/libwvhidl.so
 vendor/lib64/mediadrm/libwvdrmengine.so
 
+# DSP - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
+vendor/bin/dspservice|c90e78bc6c7765b6c43409c62cc3c5d61c0132c6
+vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc|fbf2bb38ca6bdddf98c7123da9e1f263a4eec55f
+vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy|f060101b26d3674bb173e5fc95e118f56a8ac15d
+vendor/lib64/vendor.qti.hardware.dsp@1.0.so|24e3753889e3bc99ac901a71868f94d34d5b9cb2
+
 # FM - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
 vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so|5f2de784f17fa29262de0c7cfd1dadd4a5d55131
 vendor/lib/vendor.qti.hardware.fm@1.0.so|ac759b58e79e9354dc55f3c4010fde4e691c4f20
