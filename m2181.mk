@@ -348,6 +348,12 @@ $(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service.m2181
 
+# Vendor service manager
+# vndservicemanager has been removed from API30 devices (aosp/1235751)
+# but we still need it for display services.
+PRODUCT_PACKAGES += \
+    vndservicemanager
+
 # Vulkan
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.compute-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.compute-0.xml \
