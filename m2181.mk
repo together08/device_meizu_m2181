@@ -213,6 +213,10 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libxml2
 
+# Service Tracker
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.servicetracker@1.2.vendor
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0-service.multihal \
