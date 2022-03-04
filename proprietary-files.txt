@@ -688,6 +688,16 @@ vendor/lib64/libmeters-ns.so|d7f77e3316ac6bf85c46218c5dd045b8ea45182c
 vendor/lib64/libprekill.so|c820ce3e9a5281765ded25918ccf19bbd71f7808
 vendor/lib64/libsplh.so|ab50d0c632dadf25ebd7c68947da2099ae310c1b
 
+# SCVE - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
+vendor/lib64/libscveCommon.so|6adf58a1b21c3ffad3018708d351b88709665527
+vendor/lib64/libscveCommon_stub.so|feb605c644e088129e9ca291e358b0ad9ba11c16
+vendor/lib64/libscveObjectSegmentation.so|0f25100bd68908e30a8b92bc3f2332fbb0bca940
+vendor/lib64/libscveObjectSegmentation_stub.so|8a97ddd79f66978067b22e46d707a0dfecb368ea
+vendor/lib64/libscveObjectTracker.so|46d68d63b4a71ba486779c3f6e2c85233ecb8bb1
+vendor/lib64/libscveObjectTracker_stub.so|1a9bd587a432b0b8950a2ed012257b00fd7e89eb
+vendor/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so|e5e18a9383e9c16f1016a8034a9ae18f05217716
+vendor/lib64/vendor.qti.hardware.scve.panorama@1.0.so|c5514ccf10d2ff9bd22695e86156d9a7f6da1063
+
 # Sensors - from meizu/meizu_18_CN/meizu18:11/RKQ1.210715.001/1635405383:user/release-keys
 vendor/bin/hw/android.hardware.sensors@2.0-service.multihal
 vendor/bin/init.qcom.sensors.sh
