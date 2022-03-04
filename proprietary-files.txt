@@ -688,6 +688,28 @@ vendor/lib64/libmeters-ns.so|d7f77e3316ac6bf85c46218c5dd045b8ea45182c
 vendor/lib64/libprekill.so|c820ce3e9a5281765ded25918ccf19bbd71f7808
 vendor/lib64/libsplh.so|ab50d0c632dadf25ebd7c68947da2099ae310c1b
 
+# Sensors - from meizu/meizu_18_CN/meizu18:11/RKQ1.210715.001/1635405383:user/release-keys
+vendor/bin/hw/android.hardware.sensors@2.0-service.multihal
+vendor/bin/init.qcom.sensors.sh
+vendor/bin/sensors.qti
+vendor/bin/sscrpcd
+vendor/etc/init/android.hardware.sensors@2.0-service-multihal.rc
+vendor/etc/init/init.vendor.sensors.rc
+vendor/etc/init/vendor.sensors.qti.rc
+vendor/etc/init/vendor.sensors.sscrpcd.rc
+vendor/lib64/rfsa/adsp/libsns_device_mode_skel.so
+vendor/lib64/rfsa/adsp/libsns_low_lat_stream_skel.so
+vendor/lib64/libsensorslog.so
+vendor/lib64/libsns_api.so
+vendor/lib64/libsns_device_mode_stub.so
+vendor/lib64/libsns_fastRPC_util.so
+vendor/lib64/libsns_low_lat_stream_stub.so
+vendor/lib64/libsns_registry_skel.so
+vendor/lib64/libsnsapi.so
+vendor/lib64/libsnsdiaglog.so
+vendor/lib64/libssc.so
+vendor/lib64/sensors.ssc.so
+
 # Sensor-configs - from meizu/meizu_18_CN/meizu18:11/RKQ1.210715.001/1635405383:user/release-keys
 vendor/etc/sensors/config/cedros_ak991x_0.json
 vendor/etc/sensors/config/cedros_bu52053nvx_0.json
