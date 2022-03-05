@@ -112,6 +112,9 @@ DEVICE_MANIFEST_YUPIK_FILES := $(DEVICE_PATH)/manifest_yupik.xml
 
 DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/compatibility_matrix.xml
 
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    $(DEVICE_PATH)/framework_compatibility_matrix.xml
+
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 3
 BOARD_KERNEL_BASE := 0x00000000
