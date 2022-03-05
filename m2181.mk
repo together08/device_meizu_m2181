@@ -229,10 +229,8 @@ PRODUCT_COPY_FILES += \
 
 # ODM ueventd.rc
 # - only for use with VM support right now
-ifeq ($(TARGET_ENABLE_VM_SUPPORT),true)
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/ueventd-odm.rc:$(TARGET_COPY_OUT_ODM)/ueventd.rc
 PRODUCT_PACKAGES += vmmgr vmmgr.rc vmmgr.conf
-endif
 
 # OMX Packages
 PRODUCT_PACKAGES += \
