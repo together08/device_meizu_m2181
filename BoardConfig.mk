@@ -99,18 +99,12 @@ BOARD_HAVE_QCOM_FM := true
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 
 # HIDL
-# QCV allows multiple chipsets to be supported on a single vendor.
-# Add vintf device manifests for chipsets in Lahaina QCV family below.
-TARGET_USES_QCV := true
-DEVICE_MANIFEST_SKUS := lahaina shima yupik
-DEVICE_MANIFEST_LAHAINA_FILES := $(DEVICE_PATH)/manifest_lahaina.xml
-DEVICE_MANIFEST_SHIMA_FILES := $(DEVICE_PATH)/manifest_shima.xml
-DEVICE_MANIFEST_YUPIK_FILES := $(DEVICE_PATH)/manifest_yupik.xml
+DEVICE_MATRIX_FILE += $(DEVICE_PATH)/vintf/compatibility_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    $(DEVICE_PATH)/vintf/framework_compatibility_matrix.xml \
+    vendor/lineage/config/device_framework_matrix.xml
 
-DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/compatibility_matrix.xml
-
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-    $(DEVICE_PATH)/framework_compatibility_matrix.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/vintf/manifest.xml
 
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 3
