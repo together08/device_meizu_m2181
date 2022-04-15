@@ -134,9 +134,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3-service.clearkey
 
-# Fastboot
+# Fastbootd & Fastboot HAL
 PRODUCT_PACKAGES += \
-    fastbootd
+    fastbootd \
+    android.hardware.fastboot@1.1-impl-mock
 
 # Fstab
 PRODUCT_COPY_FILES += \
