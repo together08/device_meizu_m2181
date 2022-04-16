@@ -236,6 +236,9 @@ PRODUCT_PACKAGES += \
     SecureElement \
     Tag
 
+PRODUCT_PACKAGES += \
+    se_nq_extn_client
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml \
     frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.ese.xml \
