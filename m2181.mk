@@ -84,6 +84,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml
 
 PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0.vendor \
+    libbthost_if \
     android.hardware.bluetooth.audio@2.0-impl \
     audio.bluetooth.default \
     com.qualcomm.qti.bluetooth_audio@1.0.vendor \
@@ -123,7 +125,7 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, hardware/qcom-caf/sm8350/display/config/display-product.mk)
 $(call inherit-product, hardware/qcom-caf/sm8350/display/config/display-board.mk)
 $(call inherit-product, vendor/qcom/opensource/display/config/display-product-vendor.mk)
-$(call inherit-product, vendor/qcom/opensource/commonsys/display/config/display-product-commonsys.mk)
+# $(call inherit-product, vendor/qcom/opensource/commonsys/display/config/display-product-commonsys.mk)
 $(call inherit-product, vendor/qcom/opensource/commonsys-intf/display/config/display-interfaces-product.mk)
 $(call inherit-product, vendor/qcom/opensource/commonsys-intf/display/config/display-product-system.mk)
 
