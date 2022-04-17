@@ -231,17 +231,31 @@ PRODUCT_PACKAGES += \
     libnl
 
 # NFC
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/nxp/opensource/sn100x
+
 PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.2-service \
     com.android.nfc_extras \
-    libchrome.vendor \
-    NfcNci \
-    nfc_nci.nqx.default.hw \
-    SecureElement \
+    com.gsma.services.nfc \
+    com.nxp.nfc.nq \
+    NQNfcNci \
     Tag
 
 PRODUCT_PACKAGES += \
+    nfc_nci.nqx.default.hw \
+    vendor.nxp.hardware.nfc@2.0-service
+
+PRODUCT_PACKAGES += \
+    jcos_nq_client \
+    ls_nq_client \
     se_nq_extn_client
+
+PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.2.vendor \
+    android.hardware.secure_element@1.1 \
+    android.hardware.secure_element@1.1.vendor \
+    android.hardware.secure_element@1.2 \
+    android.hardware.secure_element@1.2.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml \
