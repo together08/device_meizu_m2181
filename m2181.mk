@@ -251,6 +251,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
     frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hcef.xml
 
+# Neural Network
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.3.vendor
+
 # ODM ueventd.rc
 # - only for use with VM support right now
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/ueventd-odm.rc:$(TARGET_COPY_OUT_ODM)/ueventd.rc
