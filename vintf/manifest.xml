@@ -10,16 +10,6 @@ w<!--
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
-        <version>7.0</version>
-        <interface>
-            <name>IDevicesFactory</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@7.0::IDevicesFactory/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.audio</name>
-        <transport>hwbinder</transport>
         <version>6.0</version>
         <interface>
             <name>IDevicesFactory</name>
