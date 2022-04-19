@@ -84,7 +84,7 @@ persist.vendor.sensors.sync_request=true
 
 # SoC
 ro.soc.manufacturer=QTI
-ro.soc.model=SM7325
+ro.soc.model=SM8350
 
 # SSR
 persist.vendor.ssr.restart_level=ALL_ENABLE
