@@ -1509,6 +1509,8 @@ vendor/firmware/vpu20_4v_unsigned.mbn
 
 # WiFi - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
 vendor/bin/cnss-daemon|3ff1023b8e36cebafba86d96214c97d5e383ab16
+vendor/etc/wifi/aoa_cldb_falcon.bin
+vendor/etc/wifi/aoa_cldb_swl14.bin
 
 # WiFi Display - from LA.UM.9.14.r1-18600.02-LAHAINA.QSSI12.0
 vendor/bin/wfdhdcphalservice|c7589cf5de18b34fd0fd8b2c32661530293c672e
