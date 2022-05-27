@@ -170,7 +170,7 @@ $(call inherit-product, vendor/qcom/opensource/commonsys-intf/display/config/dis
 $(call inherit-product, vendor/qcom/opensource/commonsys-intf/display/config/display-product-system.mk)
 
 PRODUCT_PACKAGES += \
-    android.hardware.lights-service.qti
+    android.hardware.light@2.0-service.meizu_sm8350
 
 # DTB
 PRODUCT_COPY_FILES += \
