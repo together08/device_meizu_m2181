@@ -425,10 +425,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml
 
 # Vibrator
-$(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.mk)
-
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service.m2181
+    android.hardware.vibrator@1.3-service.meizu_sm8350
+
+PRODUCT_COPY_FILES += \
+    vendor/qcom/opensource/vibrator/excluded-input-devices.xml:vendor/etc/excluded-input-devices.xml
 
 # Vendor service manager
 # vndservicemanager has been removed from API30 devices (aosp/1235751)

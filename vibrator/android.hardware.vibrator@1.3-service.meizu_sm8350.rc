@@ -1,0 +1,4 @@
+service vibrator.meizu_sm8350 /system/bin/hw/android.hardware.vibrator@1.3-service.meizu_sm8350
+    class late_start
+    user system
+    group system
