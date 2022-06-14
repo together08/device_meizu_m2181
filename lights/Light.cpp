@@ -60,10 +60,8 @@ static T get(const std::string& path, const T& def) {
 Light::Light() {
     auto attnFn(std::bind(&Light::setAttentionLight, this, std::placeholders::_1));
     auto backlightFn(std::bind(&Light::setPanelBacklight, this, std::placeholders::_1));
-    auto notifFn(std::bind(&Light::setNotificationLight, this, std::placeholders::_1));
     mLights.emplace(std::make_pair(Type::ATTENTION, attnFn));
     mLights.emplace(std::make_pair(Type::BACKLIGHT, backlightFn));
-    mLights.emplace(std::make_pair(Type::NOTIFICATIONS, notifFn));
 }
 
 // Methods from ::android::hardware::light::V2_0::ILight follow.
@@ -94,7 +92,6 @@ Return<void> Light::getSupportedTypes(getSupportedTypes_cb _hidl_cb) {
 void Light::setAttentionLight(const LightState& state) {
     std::lock_guard<std::mutex> lock(mLock);
     mAttentionState = state;
-    setSpeakerBatteryLightLocked();
 }
 
 void Light::setPanelBacklight(const LightState& state) {
@@ -113,12 +110,6 @@ void Light::setPanelBacklight(const LightState& state) {
     LOG(VERBOSE) << "scaling brightness " << old_brightness << " => " << brightness;
 
     set(PANEL_BRIGHTNESS_PATH, brightness);
-}
-
-void Light::setNotificationLight(const LightState& state) {
-    std::lock_guard<std::mutex> lock(mLock);
-    mNotificationState = state;
-    setSpeakerBatteryLightLocked();
 }
 
 }  // namespace implementation
