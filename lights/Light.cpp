@@ -13,10 +13,6 @@
 #include <fstream>
 
 #define PANEL_BRIGHTNESS_PATH     "/sys/class/backlight/panel0-backlight/brightness"
-#define MX_LED_BLINK_PATH         "/sys/class/leds/breath/blink"
-
-#define LED_OFF 0
-#define LED_BLINK 10
 
 namespace {
 using android::hardware::light::V2_0::LightState;
@@ -123,16 +119,6 @@ void Light::setNotificationLight(const LightState& state) {
     std::lock_guard<std::mutex> lock(mLock);
     mNotificationState = state;
     setSpeakerBatteryLightLocked();
-}
-
-void Light::setSpeakerBatteryLightLocked() {
-    if (isLit(mNotificationState)) {
-        set(MX_LED_BLINK_PATH, LED_BLINK);
-    } else if (isLit(mAttentionState)) {
-        set(MX_LED_BLINK_PATH, LED_BLINK);
-    } else {
-        set(MX_LED_BLINK_PATH, LED_OFF);
-    }
 }
 
 }  // namespace implementation
