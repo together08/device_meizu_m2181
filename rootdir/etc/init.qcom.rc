@@ -724,7 +724,7 @@ service wifi-crda /vendor/bin/init.crda.sh
 
 on property:sys.boot_completed=1
     start qcom-post-boot
-    start qti-testscripts
+#   start qti-testscripts
 
 on property:ro.vendor.ril.mbn_copy_completed=1
     write /data/vendor/radio/copy_complete 1
@@ -860,6 +860,7 @@ service esepmdaemon /system/vendor/bin/esepmdaemon
 on charger
     setprop persist.sys.usb.config mass_storage
     start qcom-post-boot
+    chmod 666 /sys/class/backlight/panel0-backlight/brightness
 
 #add poweroffhandler
 service poweroffhandler /system/vendor/bin/poweroffhandler

@@ -235,9 +235,12 @@ PRODUCT_PACKAGES += \
     init.mdm.sh \
     init.qcom.class_core.sh \
     init.qcom.early_boot.sh \
+    init.qcom.factory.rc \
     init.qcom.post_boot.sh \
     init.qcom.rc \
     init.qcom.sh \
+    init.qti.kernel.rc \
+    init.qti.ufs.rc \
     init.recovery.qcom.rc \
     init.target.rc \
     ueventd.qcom.rc

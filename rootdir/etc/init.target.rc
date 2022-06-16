@@ -1,3 +1,4 @@
+
 # Copyright (c) 2019-2020, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -30,13 +31,18 @@
 import /vendor/etc/init/hw/init.qti.kernel.rc
 
 on early-init
+    write /sys/bootprof/bootprof "INIT:early-init"
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/vendor_modprobe.sh
-    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules q6_pdr_dlkm q6_notifier_dlkm snd_event_dlkm apr_dlkm adsp_loader_dlkm q6_dlkm native_dlkm pinctrl_wcd_dlkm pinctrl_lpi_dlkm swr_dlkm platform_dlkm hdmi_dlkm stub_dlkm wcd_core_dlkm wsa883x_dlkm bolero_cdc_dlkm wsa_macro_dlkm va_macro_dlkm rx_macro_dlkm tx_macro_dlkm bt_fm_slim wcd938x_dlkm wcd938x_slave_dlkm wcd937x_dlkm wcd937x_slave_dlkm swr_dmic_dlkm swr_haptics_dlkm machine_dlkm radio-i2c-rtc6226-qca cdsprm
+    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules q6_pdr_dlkm q6_notifier_dlkm snd_event_dlkm apr_dlkm adsp_loader_dlkm q6_dlkm native_dlkm pinctrl_wcd_dlkm pinctrl_lpi_dlkm swr_dlkm platform_dlkm hdmi_dlkm stub_dlkm wcd_core_dlkm wsa883x_dlkm bolero_cdc_dlkm wsa_macro_dlkm va_macro_dlkm rx_macro_dlkm tx_macro_dlkm bt_fm_slim wcd938x_dlkm wcd938x_slave_dlkm swr_dmic_dlkm swr_haptics_dlkm machine_dlkm radio-i2c-rtc6226-qca mmc_core mmc_block sdhci sdhci-pltfm sdhci-msm cdsprm
+    write /sys/bootprof/bootprof "INIT:audio start"
+    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules cs35l41_dlkm cs35l45_dlkm
+    write /sys/bootprof/bootprof "INIT:audio end"
     write /proc/sys/kernel/sched_boost 1
     wait /sys/devices/soc0/soc_id
-
+	write /sys/bootprof/bootprof "INIT:early-init end"
 on init
     # Scheduler uclamp
+    write /sys/bootprof/bootprof "INIT:init"
     mkdir /dev/cpuctl/foreground
     mkdir /dev/cpuctl/background
     mkdir /dev/cpuctl/top-app
@@ -61,16 +67,78 @@ on init
     write /dev/cpuctl/top-app/cpu.rt_runtime_us 950000
     write /dev/cpuctl/rt/cpu.rt_runtime_us 950000
 
+    # add by xuewenwang@meizu.com vibrator permession {@
+    chmod 0666 /sys/class/meizu/motor/on_off
+    chown system system /sys/class/meizu/motor/on_off
+    chmod 0660 /sys/class/meizu/motor/set_cspress
+    chown system system /sys/class/meizu/motor/set_cspress
+    chmod 0660 /sys/class/meizu/motor/set_mback
+    chown system system /sys/class/meizu/motor/set_mback
+    chmod 0660 /sys/class/meizu/motor/rtp
+    chown system system /sys/class/meizu/motor/rtp
+    chmod 0660 sys/class/meizu/motor/game
+    chown system system sys/class/meizu/motor/game
+    chmod 0660 /sys/class/meizu/motor/set_rtp
+    chown system system /sys/class/meizu/motor/set_rtp
+    chmod 0660 /sys/class/meizu/motor/waveform
+    chown system system /sys/class/meizu/motor/waveform
+    chmod 0660 /sys/class/meizu/motor/freq
+    chown system system /sys/class/meizu/motor/freq
+    chmod 0660 /sys/class/meizu/motor/enable
+    chown system system /sys/class/meizu/motor/enable
+    chmod 0666 /sys/class/timed_output/vibrator/enable
+    chown system system /sys/class/timed_output/vibrator/enable
+    chown system system /dev/aw8697_haptic
+    chmod 0777 /dev/aw8697_haptic
+    chown system audio /sys/class/meizu/motor/haptic_audio
+    chmod 0660 /sys/class/meizu/motor/haptic_audio
+    chmod 0660 /sys/class/meizu/motor/usr_f0
+    chown system system /sys/class/meizu/motor/usr_f0
+    mkdir /data/awinic 0770 system audio
+    # @}
+
+    #add by xuewenwang@meizu.com for ForceTouch calibration {@
+    chmod 0666 /dev/ndt
+    chmod 0666 /sys/cs_press/cs_press/sleep
+    chmod 0666 /sys/cs_press/cs_press/cal_data
+    chmod 0666 /sys/cs_press/cs_press/shortcut_key
+    chown system system /dev/ndt
+    chown system system /sys/cs_press/cs_press/sleep
+    chown system system /sys/cs_press/cs_press/cal_data
+    chown system system /sys/cs_press/cs_press/shortcut_key
+    #@}
+
+    wait /dev/block/platform/soc/1d84000.ufshc
+    symlink /dev/block/platform/soc/1d84000.ufshc /dev/block/bootdevice
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
     chown system system /sys/devices/platform/soc/1d84000.ufshc/auto_hibern8
     chmod 0660 /sys/devices/platform/soc/1d84000.ufshc/auto_hibern8
     start logd
 
+    #change rstinfo interface files owner & group. bsp-stability{@
+    chown system system /sys/rstinfo/rstinfo_enable
+    restorecon /sys/rstinfo/rstinfo_enable
+    chown system system /proc/stability/rstinfo_cnt
+    chown system system /proc/stability/rstinfo_debug
+    chown system system /proc/stability/rstinfo_cnt_log
+    chown system system /proc/stability/rstinfo_rst_log
+    chown system system /proc/stability/rstinfo_android_cnt
+
+    #change soc serialno perm.
+    chmod 0440 /sys/devices/soc0/serial_number
+    chown system system /sys/devices/soc0/serial_number
+
+    # trigger rstinfo to load reset_reason
+    write /sys/rstinfo/rstinfo_enable 0xff
+    #@}
+
 on early-fs
+	write /sys/bootprof/bootprof "INIT:start vold"
     start vold
 
 on fs
+	write /sys/bootprof/bootprof "INIT:Mount_START"
     start hwservicemanager
     mkdir /mnt/vendor/spunvm 0660 system system
     mount_all --early
@@ -78,6 +146,7 @@ on fs
     chmod 0771 /mnt/vendor/persist
     restorecon_recursive /mnt/vendor/persist
     mkdir /mnt/vendor/persist/data 0700 system system
+    write /sys/bootprof/bootprof "INIT:Mount_END"
 
 on fs && property:ro.boot.product.vendor.sku=lahaina
     mkdir /mnt/vendor/spunvm 0660 system system
@@ -85,6 +154,7 @@ on fs && property:ro.boot.product.vendor.sku=lahaina
     mount vfat /dev/block/bootdevice/by-name/spunvm /mnt/vendor/spunvm rw noatime shortname=lower,uid=1000,gid=1000,dmask=007,fmask=007,context=u:object_r:vendor_spunvm_file:s0
 
 on post-fs
+	write /sys/bootprof/bootprof "INIT:post-fs"
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
 
@@ -93,7 +163,27 @@ on late-fs
     #exec_start wait_for_keymaster
     mount_all --late
 
+    #add by huanghai for srs {@
+    chown system system /sys/srs/srs_enable
+    chmod 0664 /sys/srs/srs_enable
+    chown system system /sys/srs/srs_debug
+    chmod 0664 /sys/srs/srs_debug
+    chown system system /sys/srs/srs_cpulevel
+    chmod 0664 /sys/srs/srs_cpulevel
+    chown system system /sys/srs/srs_gpulevel
+    chmod 0664 /sys/srs/srs_gpulevel
+    chown system system /sys/srs/srs_buslevel
+    chmod 0664 /sys/srs/srs_buslevel
+    chown system system /sys/srs/srs_iolevel
+    chmod 0664 /sys/srs/srs_iolevel
+    chown system system /sys/srs/srs_memlevel
+    chmod 0664 /sys/srs/srs_memlevel
+    
+    chown system system /sys/bootprof/bootprof
+    chmod 0220 /sys/bootprof/bootprof
+    
 on post-fs-data
+	write /sys/bootprof/bootprof "INIT:post-fs-data"
     mkdir /vendor/data/tombstones 0771 system system
     # Enable WLAN cold boot calibration
     write /sys/devices/platform/soc/b0000000.qcom,cnss-qca6490/fs_ready 1
@@ -102,6 +192,7 @@ on early-boot
     start vendor.sensors
 
 on boot
+	write /sys/bootprof/bootprof "INIT:boot"
     write /dev/cpuset/audio-app/cpus 1-2
     # Add a cpuset for the camera daemon
     # We want all cores for camera
@@ -141,6 +232,130 @@ on boot
     exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules/5.4-gki qca_cld3_wlan qca_cld3_qca6390
     #Allow access to memory hotplug device attributes
     chown system system /sys/kernel/mem-offline/anon_migrate
+
+    # Permissions for breath-led
+    chmod 0666 /sys/class/meizu/mx_leds/leds/breath/blink
+    chown system system /sys/class/meizu/mx_leds/leds/breath/blink
+
+# interface config for display {@start
+    chmod 0666 /sys/class/meizu/lcm/display/fod
+    chown system system /sys/class/meizu/lcm/display/fod
+
+    chmod 0666 /sys/class/meizu/lcm/display/wait_for_capture_fp
+    chown system system /sys/class/meizu/lcm/display/wait_for_capture_fp
+
+    chmod 0666 /sys/class/meizu/lcm/display/aod
+    chown system system /sys/class/meizu/lcm/display/aod
+
+    chmod 0666 /sys/class/meizu/lcm/display/aod_bl
+    chown system system /sys/class/meizu/lcm/display/aod_bl
+
+    chmod 0666 /sys/class/meizu/lcm/display/lut
+    chown system system /sys/class/meizu/lcm/display/lut
+
+    chmod 0666 /sys/class/meizu/lcm/display/flat
+    chown system system /sys/class/meizu/lcm/display/flat
+
+    chmod 0666 /sys/class/meizu/lcm/display/sunnyscreen
+    chown system system /sys/class/meizu/lcm/display/sunnyscreen
+
+    chmod 0666 /sys/class/meizu/lcm/display/dimming_setting
+    chown system system /sys/class/meizu/lcm/display/dimming_setting
+
+    chmod 0666 /sys/class/meizu/lcm/display/fp_result
+    chown system system /sys/class/meizu/lcm/display/fp_result
+
+    chmod 0666 /sys/class/meizu/lcm/display/llp
+    chown system system /sys/class/meizu/lcm/display/llp
+# interface config for display @end}
+
+# Permissions for tp Production line{@start
+    chmod 777 /vendor/bin/gt_mp_test
+    chown system system /vendor/bin/gt_mp_test
+    chmod 0666 /dev/gtp_tools
+    chown system system /dev/gtp_tools
+#@end}
+
+# Permissions for tp  {@start
+    chmod 0666 /sys/class/meizu/tp/gesture_control
+    chown system system /sys/class/meizu/tp/gesture_control
+
+    chmod 0666 /sys/class/meizu/tp/gesture_data
+    chown system system /sys/class/meizu/tp/gesture_data
+
+    chmod 0666 /sys/class/meizu/main_tp/appid
+    chown system system /sys/class/meizu/main_tp/appid
+
+    chmod 0666 /sys/class/meizu/main_tp/gesture_info
+    chown system system /sys/class/meizu/main_tp/gesture_info
+
+    chmod 0666 /sys/class/meizu/main_tp/goodix_ts_FOD_node
+    chown system system /sys/class/meizu/main_tp/goodix_ts_FOD_node
+
+    chmod 0666 /sys/class/meizu/main_tp/intr2_test_node
+    chown system system /sys/class/meizu/main_tp/intr2_test_node
+
+    chmod 0666 /sys/class/meizu/main_tp/intr2_enable_node
+    chown system system /sys/class/meizu/main_tp/intr2_enable_node
+
+    chmod 0666 /sys/class/meizu/main_tp/frame_rate_node
+    chown system system /sys/class/meizu/main_tp/frame_rate_node
+
+    chmod 0666 /sys/class/meizu/main_tp/charge_enable_node
+    chown system system /sys/class/meizu/main_tp/charge_enable_node
+
+    chmod 0666 /sys/class/meizu/main_tp/game_mode_node
+    chown system system /sys/class/meizu/main_tp/game_mode_node
+
+    chmod 0666 /sys/class/meizu/main_tp/screen_mode_node
+    chown system system /sys/class/meizu/main_tp/screen_mode_node
+
+    chmod 0666 /sys/class/meizu/main_tp/report_port_distance_node
+    chown system system /sys/class/meizu/main_tp/report_port_distance_node
+
+    chmod 0666 /sys/class/meizu/main_tp/goodix_sleep
+    chown system system /sys/class/meizu/main_tp/goodix_sleep
+
+    chmod 0666 /sys/class/meizu/main_tp/goodix_soft_irq
+    chown system system /sys/class/meizu/main_tp/goodix_soft_irq
+
+    chmod 0666 /sys/class/meizu/main_tp/force_update
+    chown system system /sys/class/meizu/main_tp/force_update
+
+    chmod 0666 /sys/class/meizu/main_tp/prevent_mistake_touch
+    chown system system /sys/class/meizu/main_tp/prevent_mistake_touch
+
+#@end}
+
+# FLYME:wangxiaoyong@SHELL.AOD.Feature {@
+    chmod 0666 /sys/class/meizu/lcm/display/aod_bl
+    chown system system /sys/class/meizu/lcm/display/aod_bl
+# @}
+
+#For flash-led, Camera qindong@meizu.com{@
+    #//M2091
+    chmod 0666 /sys/devices/platform/soc/soc:qcom,camera-flash0/flash_both
+    chown media system /sys/devices/platform/soc/soc:qcom,camera-flash0/flash_both
+    #//M2181/M2191
+    chmod 0666 /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8350c@2:qcom,flash_led@ee00/leds/led:switch_1/brightness
+    chown media system /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8350c@2:qcom,flash_led@ee00/leds/led:switch_1/brightness
+    chmod 0666 /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8350c@2:qcom,flash_led@ee00/leds/led:torch_1/brightness
+    chown media system /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8350c@2:qcom,flash_led@ee00/leds/led:torch_1/brightness
+#@}
+
+# Permissions for charge &battery, add by liujiankun@meizu.com {@
+	chmod 0666 /sys/class/meizu/charger/hlos_chg_disable
+    chmod 0666 /sys/class/meizu/charger/hlos_cur_voter
+    chmod 0666 /sys/class/meizu/charger/cmd_discharging
+    chmod 0666 /sys/class/meizu/wireless/reverse_chg_enable
+    chmod 0444 /sys/class/meizu/wireless/reverse_chg_stat
+	chown system system /sys/class/meizu/charger/hlos_chg_disable
+    chown system system /sys/class/meizu/charger/hlos_cur_voter
+    chown system system /sys/class/meizu/charger/cmd_discharging
+    chown system system /sys/class/meizu/wireless/reverse_chg_enable
+    chown system system /sys/class/meizu/wireless/reverse_chg_stat
+
+#@}
 
 on property:vendor.display.lcd_density=560
    setprop dalvik.vm.heapgrowthlimit 256m
@@ -186,6 +401,15 @@ service vendor.per_proxy /vendor/bin/pm-proxy
     group system
     disabled
 
+service vendor.thermal-engine /vendor/bin/thermal-engine
+   class main
+   user root
+   socket thermal-send-client stream 0666 system system
+   socket thermal-recv-client stream 0660 system system
+   socket thermal-recv-passive-client stream 0666 system system
+   socket thermal-send-rule stream 0660 system system
+   group root
+
 #service vendor.mdm_helper /vendor/bin/mdm_helper
 #    class core
 #    group system wakelock
@@ -194,6 +418,17 @@ service vendor.per_proxy /vendor/bin/pm-proxy
 service vendor.mdm_launcher /vendor/bin/sh /vendor/bin/init.mdm.sh
     class core
     oneshot
+
+# PA calibration {@
+on post-fs-data
+    chown system audio /dev/msm_cirrus_playback
+    chmod 0660 /dev/msm_cirrus_playback
+# @}
+
+# Permissions for mz_rpmb_ctl, add by luoyongjie1@bsp {@
+ chown system system /dev/mz_rpmb_ctl
+ chmod 0660 /dev/mz_rpmb_ctl
+#@}
 
 on property:init.svc.vendor.per_mgr=running
     start vendor.per_proxy
