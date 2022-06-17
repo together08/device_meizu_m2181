@@ -1,16 +1,25 @@
-# Audio
-ro.config.media_vol_default=8
-ro.config.media_vol_steps=25
-ro.config.vc_call_vol_default=9
-ro.config.vc_call_vol_steps=11
+# CNE
+persist.vendor.cne.feature=1
 
-# Bluetooth
-persist.vendor.bt.a2dp.aac_whitelist=false
+# DPM
+persist.vendor.dpm.feature=1
 
-# Charger
-ro.charger.enable_suspend=true
+# Graphics
+debug.sf.enable_hwc_vds=1
+
+# IMS
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+
+# Media
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
+ro.media.recorder-max-base-layer-fps=60
 
 # Netflix
 ro.netflix.bsp_rev=Q7325-SPY-33758-1
 ro.netflix.channel=497730f0-ad4b-11e7-95a4-c7ad113ce187
-ro.netflix.signup=1 
+ro.netflix.signup=1
+
+# QC framework value-adds
+ro.vendor.qti.va_aosp.support=1
