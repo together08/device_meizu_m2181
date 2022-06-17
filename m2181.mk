@@ -329,9 +329,13 @@ PRODUCT_PACKAGES += vmmgr vmmgr.rc vmmgr.conf
 PRODUCT_PACKAGES += \
     libOmxAacEnc \
     libOmxAmrEnc \
+    libOmxCore \
     libOmxEvrcEnc \
     libOmxG711Enc \
-    libOmxQcelp13Enc
+    libOmxQcelp13Enc \
+    libmm-omxcore \
+    libstagefright_softomx.vendor \
+    libstagefrighthw
 
 # OpenGL
 PRODUCT_COPY_FILES += \
