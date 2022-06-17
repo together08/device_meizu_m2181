@@ -65,6 +65,10 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.2-impl
 
 PRODUCT_PACKAGES += \
+    audio.primary.lahaina \
+    sound_trigger.primary.lahaina \
+    liba2dpoffload \
+    libbatterylistener \
     audioadsprpcd \
     audio.a2dp.default \
     audio.r_submix.default \
