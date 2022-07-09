@@ -184,6 +184,10 @@ vendor/lib/soundfx/libshoebox.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
+vendor/lib/soundfx/libbassboostMz.so
+vendor/lib/soundfx/libequalizerMz.so
+vendor/lib/soundfx/libvirtualizerMz.so
+vendor/lib/soundfx/liblivemusicMz.so
 
 # Alarm
 product/app/PowerOffAlarm/PowerOffAlarm.apk|17B478A5A581E47A87B6A4FF88DC034EB766E35B        
